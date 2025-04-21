@@ -1,27 +1,24 @@
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg) ![crewai](https://img.shields.io/badge/crewai-%3E%3D0.83.0-ff69b4) ![OpenAI Whisper](https://img.shields.io/badge/openai-whisper-green) ![Gmail API](https://img.shields.io/badge/gmail%20api-v1-yellow)
 
-# 🚀 meeting_minutes: The Ultimate GenAI-Powered Meeting Automation Suite
+# meeting_minutes
 
-> A high-performance, extensible, multi-agent AI system that **transcribes**, **summarizes**, **analyzes sentiment**, **extracts action items**, and **automatically drafts emails** — all in one seamless flow!
-
-> **Unleash the power of generative AI and agentic workflows to supercharge your team’s productivity.**
-
----
-
-## ✨ Why meeting_minutes?
-
-- Lightning-fast, accurate transcription of audio meetings using OpenAI Whisper.
-- Intelligent summarization, action-item extraction, and sentiment analysis via customizable AI agents.
-- Fully automated email drafting with Gmail API integration — no more manual follow-ups!
-- Modular “crewAI” architecture: define agents, tasks, and tools in simple YAML.
-- Enterprise-ready: Scalable, configurable, and easy to extend with your own custom tools.
-- Ideal for remote teams, virtual assistants, and next-gen AI product demos.
-
-![Workflow Diagram](docs/meeting_minutes_workflow.png)
+A GenAI-based toolkit for automating meeting transcription, summarization, sentiment analysis,
+action-item extraction, and follow-up email drafting via configurable agent workflows.
 
 ---
 
-## 📦 Features
+## Overview
+
+- Transcribe audio meetings into text using OpenAI Whisper
+- Summarize transcripts, extract action items, and analyze sentiment
+- Generate polished Markdown meeting minutes
+- Draft follow-up emails via Gmail API
+- Configure agents and tasks through simple YAML files
+- Extend functionality with custom tools under `src/meeting_minutes/tools`
+
+---
+
+## Features
 
 | Feature                         | Details                                                                                   |
 |---------------------------------|-------------------------------------------------------------------------------------------|
@@ -35,7 +32,7 @@
 
 ---
 
-## 🔧 Tech Stack
+## Tech Stack
 
 | Technology          | Purpose                                                                 |
 |---------------------|-------------------------------------------------------------------------|
@@ -49,11 +46,11 @@
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/your-org/meeting_minutes.git
+git clone https://github.com/tanny1412/meeting_minutes_crewai.git
 cd meeting_minutes
 
 # 2. Install dependencies
@@ -75,7 +72,7 @@ Generated outputs will appear:
 
 ---
 
-## 🛠️ Configuration
+## Configuration
 
 1. **Agents**: `src/meeting_minutes/crews/*/config/agents.yaml`  
 2. **Tasks**: `src/meeting_minutes/crews/*/config/tasks.yaml`  
@@ -85,23 +82,21 @@ Generated outputs will appear:
 
 ---
 
-## 📚 How It Works
+## How It Works
 
 ```mermaid
 flowchart TD
-    A[Audio: EarningsCall.wav] --> B[Split into 1-min Chunks]
-    B --> C[Whisper Transcription]
-    C --> D[MeetingMinutesSummarizer Agent]
-    D --> E[Writes summary.txt, action_items.txt, sentiment.txt]
-    E --> F[MeetingMinutesWriter Agent]
-    F --> G[Markdown Minutes Document]
-    G --> H[GmailTool Agent]
-    H --> I[Gmail Draft via Gmail API]
+    A[Load audio file] --> B[Chunk audio (1 min)]
+    B --> C[Transcribe with Whisper]
+    C --> D[Summarize transcript]
+    D --> E[Save summary, actions, sentiment]
+    E --> F[Generate Markdown minutes]
+    F --> G[Draft email via Gmail]
 ```
 
 ---
 
-## 🚀 Use Cases
+## Use Cases
 
 - Automated stand-up recap for remote teams  
 - Investor call summarization & follow-up  
@@ -110,12 +105,12 @@ flowchart TD
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repo & create a feature branch  
 2. Add or update tools/agents/tasks  
 3. Run `pre-commit run --all-files`  
 4. Submit a PR with detailed description  
 
-> Let’s redefine how teams collaborate with Agentic AI!  
+Contributions welcome.
 ---
