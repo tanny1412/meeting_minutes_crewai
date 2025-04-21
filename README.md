@@ -82,20 +82,6 @@ Generated outputs will appear:
 
 ---
 
-## How It Works
-
-```mermaid
-graph TD;
-A[Load audio file] --> B[Chunk audio (1 min)];
-B --> C[Transcribe with Whisper];
-C --> D[Summarize transcript];
-D --> E[Save summary, actions, sentiment];
-E --> F[Generate Markdown minutes];
-F --> G[Draft email via Gmail];
-```
-
----
-
 ## Use Cases
 
 - Automated stand-up recap for remote teams  
