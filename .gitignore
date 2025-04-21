@@ -1,0 +1,5 @@
+.env
+__pycache__/
+lib/
+src/meeting_minutes/crews/gmailcrew/tools/credentials.json
+src/meeting_minutes/crews/gmailcrew/tools/token.json
