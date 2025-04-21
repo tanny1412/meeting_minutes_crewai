@@ -85,7 +85,7 @@ Generated outputs will appear:
 ## How It Works
 
 ```mermaid
-flowchart TD
+graph TD
     A[Load audio file] --> B[Chunk audio (1 min)]
     B --> C[Transcribe with Whisper]
     C --> D[Summarize transcript]
